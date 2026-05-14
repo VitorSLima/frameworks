@@ -1,6 +1,5 @@
-import { CreateUserRepository } from './../repository/create-user.repository';
 import { BadRequestException, Injectable, Logger } from '@nestjs/common';
-import { FindUserByEmailRepository } from '../repository';
+import { CreateUserRepository, FindUserByEmailRepository } from '../repository';
 import { JwtService } from '@nestjs/jwt';
 import { RegisterDto } from '../dto/register.dto';
 import * as bcrypt from 'bcrypt';
