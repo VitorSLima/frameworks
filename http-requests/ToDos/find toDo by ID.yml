@@ -1,0 +1,15 @@
+info:
+  name: find toDo by ID
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/todos/82f97290-de58-4d29-a56b-3f827f9e577a"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

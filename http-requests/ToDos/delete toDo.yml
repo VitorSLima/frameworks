@@ -1,0 +1,17 @@
+info:
+  name: delete toDo
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{url}}/todos/cf817cb1-a930-4c31-852d-f9eb57d0c6da"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0OGYwMDIwOC1jNmNhLTQzOTctYjQzZC00ZjlmODI2YWQxMDEiLCJlbWFpbCI6InZpdG9yLmxpbWFAaWZtcy5lZHUuYnIiLCJpYXQiOjE3NzkxMDg1ODksImV4cCI6MTc3OTE5NDk4OX0.KIE4tq2eiSLttSNecQpJHdwLXuX7ghaK7Pa9i-WU5Bg
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

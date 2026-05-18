@@ -1,0 +1,22 @@
+info:
+  name: login
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/auth/login"
+  body:
+    type: json
+    data: |-
+      {
+        "email": "vitor.lima@ifms.edu.br",
+        "password": "P@$$w0rd"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,30 @@
+info:
+  name: create toDo
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/todos"
+  body:
+    type: json
+    data: |-
+      {
+        "title": "Estudar NestJS",
+        "description": "Revisar módulos, guards e DTOs",
+        "completed": false,
+        "priority": "MEDIUM",
+        "dueAt": "2026-05-25T23:59:59.000Z",
+        "completedAt": "2026-05-18T12:00:00.000Z",
+        "userId": "761a860a-573c-4171-9eae-e2521b147088",
+        "createdAt": "2026-05-18T12:00:00.000Z"
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0OGYwMDIwOC1jNmNhLTQzOTctYjQzZC00ZjlmODI2YWQxMDEiLCJlbWFpbCI6InZpdG9yLmxpbWFAaWZtcy5lZHUuYnIiLCJpYXQiOjE3NzkxMDg1ODksImV4cCI6MTc3OTE5NDk4OX0.KIE4tq2eiSLttSNecQpJHdwLXuX7ghaK7Pa9i-WU5Bg
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

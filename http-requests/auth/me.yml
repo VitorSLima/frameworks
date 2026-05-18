@@ -1,0 +1,20 @@
+info:
+  name: me
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{url}}/auth/me"
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0OGYwMDIwOC1jNmNhLTQzOTctYjQzZC00ZjlmODI2YWQxMDEiLCJlbWFpbCI6InZpdG9yLmxpbWFAaWZtcy5lZHUuYnIiLCJpYXQiOjE3NzkxMDg1ODksImV4cCI6MTc3OTE5NDk4OX0.KIE4tq2eiSLttSNecQpJHdwLXuX7ghaK7Pa9i-WU5Bg
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
