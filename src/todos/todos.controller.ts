@@ -12,12 +12,12 @@ import { TodosService } from './todos.service';
 import { CreateTodoDto } from './dto/create-todo.dto';
 import { UpdateTodoDto } from './dto/update-todo.dto';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
-import { CurrentUser } from 'src/auth/current-user.decorator';
 
 @Controller('todos')
 export class TodosController {
   constructor(private readonly todosService: TodosService) {}
 
+  @UseGuards(JwtAuthGuard)
   @Post()
   create(@Body() data: CreateTodoDto) {
     return this.todosService.create(data);
@@ -28,25 +28,18 @@ export class TodosController {
     return this.todosService.findAll();
   }
 
-  @UseGuards(JwtAuthGuard)
-  @Get('private')
-  privateRoute(@CurrentUser() user: { id: string; email: string }) {
-    return {
-      message: 'Rota protegida liberada',
-      user,
-    };
-  }
-
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.todosService.findOne(id);
   }
 
+  @UseGuards(JwtAuthGuard)
   @Patch(':id')
   update(@Param('id') id: string, @Body() data: UpdateTodoDto) {
     return this.todosService.update(id, data);
   }
 
+  @UseGuards(JwtAuthGuard)
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.todosService.remove(id);
